@@ -12,15 +12,4 @@ router.post("/add",async(req,res)=>{
     })
 })
 
-router.get("/viewall",async(req,res)=>{
-    let data=await furnitureModel.find()
-    res.json(data)
-})
-
-router.get("/search",async(req,res)=>{
-    let input = req.body
-    let data=await furnitureModel.find(input)
-    res.json(data)
-})
-
 module.exports=router
